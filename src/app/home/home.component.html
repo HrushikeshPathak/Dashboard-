@@ -1,0 +1,28 @@
+
+<div class="container"> 
+    <div>
+        Search:<input type="text" placeholder="Search Company Name " [(ngModel)]="term">
+       </div> 
+        
+    <table class="table">
+                
+            <thead>
+                <tr>
+                    <th>Company Name</th>
+                    <th>Industry</th>                    
+                    <th>Total Sale</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let company of Companies | filter:term ">
+                    <th>{{company.companyname}}</th>
+                    <th>{{company.industry}}</th>
+                    <th>Rs:{{company.totalsale}}</th>                   
+                                                      
+                
+                </tr>
+            </tbody>            
+        </table>
+      <div><button class='btn btn-primary' (click)=getCompany()>Fetch Data</button></div> 
+        </div>
+              

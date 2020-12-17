@@ -1,0 +1,36 @@
+<form [formGroup]="addcompanyForm" (ngSubmit)="onAddcompany()">
+    <div class="form-group container">       
+        <div class="row">
+        <div class="col-lg-7">
+            <div>
+        <label>Company Name :</label>
+        <input 
+        class="form-control"
+         type='text'
+         formControlName="companyname"
+         placeholder='Company name'>
+         </div>
+         <div>
+        <label>Industry Details:</label>
+        <input 
+        class="form-control" 
+        type='text'
+        formControlName="industry"
+        placeholder='Industry Details'>
+         </div>
+        
+         <div>
+        <label>Total Sale :</label>
+        <input 
+        class="form-control" 
+        type='text'
+        formControlName="totalsale" 
+        placeholder='Total Sale'>
+        </div>    
+        
+        <hr>
+        <button class='btn btn-primary' >Add Details</button>
+    </div>
+    </div>
+    </div>
+</form>
